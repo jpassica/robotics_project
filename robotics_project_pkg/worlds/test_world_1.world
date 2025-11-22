@@ -12,30 +12,272 @@
     <include>
       <uri>model://sun</uri>
     </include>
-
+    
     <!-- Walls -->
-    <model name="wall1">
-      <pose>2 0 0.5 0 0 0</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry>
-            <box><size>4 0.1 1</size></box>
-          </geometry>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <box><size>4 0.1 1</size></box>
-          </geometry>
-        </visual>
-      </link>
-    </model>
+    
+    <include>
+      <uri>model://wall_10_x</uri>
+      <name>wall_1</name>
+      <pose>5 0 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_10_x</uri>
+      <name>wall_2</name>
+      <pose>5 10 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_10_y</uri>
+      <name>wall_3</name>
+      <pose>0 5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_10_y</uri>
+      <name>wall_4</name>
+      <pose>10 5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_2_x</uri>
+      <name>wall_5</name>
+      <pose>1 1 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_2_x</uri>
+      <name>wall_6</name>
+      <pose>3 1 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_y</uri>
+      <name>wall_7</name>
+      <pose>5 0.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_2_x</uri>
+      <name>wall_8</name>
+      <pose>1 9 0.5 0 0 0</pose>
+    </include>
+    
+     <include>
+      <uri>model://wall_1_x</uri>
+      <name>wall_9</name>
+      <pose>1.5 8 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_y</uri>
+      <name>wall_10</name>
+      <pose>2 8.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_3_y</uri>
+      <name>wall_11</name>
+      <pose>3 8.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_2_y</uri>
+      <name>wall_12</name>
+      <pose>1 3 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_x</uri>
+      <name>wall_13</name>
+      <pose>3.5 2 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_x</uri>
+      <name>wall_14</name>
+      <pose>1.5 4 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_y</uri>
+      <name>wall_15</name>
+      <pose>4 1.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_x</uri>
+      <name>wall_16</name>
+      <pose>5.5 1 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_x</uri>
+      <name>wall_17</name>
+      <pose>1.5 2 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_y</uri>
+      <name>wall_18</name>
+      <pose>2 2.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_2_x</uri>
+      <name>wall_19</name>
+      <pose>3 3 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_2_y</uri>
+      <name>wall_20</name>
+      <pose>7 1 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_3_x</uri>
+      <name>wall_21</name>
+      <pose>8.5 2 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_y</uri>
+      <name>wall_22</name>
+      <pose>4 3.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_x</uri>
+      <name>wall_23</name>
+      <pose>4.5 4 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_x</uri>
+      <name>wall_24</name>
+      <pose>4.5 5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_y</uri>
+      <name>wall_25</name>
+      <pose>4 5.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_x</uri>
+      <name>wall_26</name>
+      <pose>2.5 7 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_x</uri>
+      <name>wall_27</name>
+      <pose>1.5 6 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_x</uri>
+      <name>wall_28</name>
+      <pose>1.5 5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_y</uri>
+      <name>wall_29</name>
+      <pose>2 6.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_y</uri>
+      <name>wall_30</name>
+      <pose>1 5.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_y</uri>
+      <name>wall_31</name>
+      <pose>4 9.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_3_x</uri>
+      <name>wall_32</name>
+      <pose>5.5 9 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_y</uri>
+      <name>wall_33</name>
+      <pose>5 7.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_x</uri>
+      <name>wall_34</name>
+      <pose>5.5 8 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_2_y</uri>
+      <name>wall_35</name>
+      <pose>5 3 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_1_x</uri>
+      <name>wall_36</name>
+      <pose>5.5 2 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_7_y</uri>
+      <name>wall_37</name>
+      <pose>6 4.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_7_y</uri>
+      <name>wall_38</name>
+      <pose>9 6.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_2_x</uri>
+      <name>wall_39</name>
+      <pose>8 3 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_3_y</uri>
+      <name>wall_40</name>
+      <pose>7 4.5 0.5 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://wall_3_y</uri>
+      <name>wall_41</name>
+      <pose>7 7.5 0.5 0 0 0</pose>
+    </include>
+    
+
 
     <!-- Target Object -->
     <model name="target_box">
-      <pose>3 3 0.5 0 0 0</pose>
-      <include>
-        <uri>model://box</uri>
-      </include>
+      <pose>4.5 4.5 0.5 0 0 0</pose>
+      <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box><size>0.5 0.5 0.5</size></box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+      <geometry>
+        <box><size>0.5 0.5 0.5</size></box>
+      </geometry>
+      </visual>
+      </link>
     </model>
 
   </world>
