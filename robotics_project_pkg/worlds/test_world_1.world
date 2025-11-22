@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+
+  <world name="multi_robot_world">
+
+    <!-- Ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Sun -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Walls -->
+    <model name="wall1">
+      <pose>2 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>4 0.1 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>4 0.1 1</size></box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Target Object -->
+    <model name="target_box">
+      <pose>3 3 0.5 0 0 0</pose>
+      <include>
+        <uri>model://box</uri>
+      </include>
+    </model>
+
+  </world>
+</sdf>
+
