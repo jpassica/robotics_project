@@ -1,0 +1,45 @@
+# -----------------------------
+# Limo Ackerman Robot Controllers
+# -----------------------------
+
+# Joint state controller
+limo_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+# Front-left steering hinge
+limo_fl_steering_hinge_controller:
+  type: effort_controllers/JointPositionController
+  joint: front_left_steering_hinge_joint
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 1.0
+
+# Front-right steering hinge
+limo_fr_steering_hinge_controller:
+  type: effort_controllers/JointPositionController
+  joint: front_right_steering_hinge_joint
+  pid:
+    p: 100.0
+    i: 0.0
+    d: 1.0
+
+# Rear-left wheel velocity controller
+limo_rl_wheel_controller:
+  type: effort_controllers/JointVelocityController
+  joint: rear_left_wheel_joint
+  pid:
+    p: 50.0
+    i: 0.0
+    d: 0.0
+
+# Rear-right wheel velocity controller
+limo_rr_wheel_controller:
+  type: effort_controllers/JointVelocityController
+  joint: rear_right_wheel_joint
+  pid:
+    p: 50.0
+    i: 0.0
+    d: 0.0
+

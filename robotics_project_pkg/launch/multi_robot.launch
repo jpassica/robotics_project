@@ -8,7 +8,7 @@
 
     <!-- Robot 1 -->
     <group ns="robot1">
-        <include file="$(find limo_gazebo_sim)/launch/my_limo.launch">
+        <include file="$(find robotics_project_pkg)/launch/my_limo.launch">
             <arg name="robot_namespace" value="robot1"/>
             <arg name="x" value="0.5" />
             <arg name="y" value="0.5" />
@@ -17,7 +17,7 @@
 
     <!-- Robot 2 -->
     <group ns="robot2">
-        <include file="$(find limo_gazebo_sim)/launch/my_limo.launch">
+        <include file="$(find robotics_project_pkg)/launch/my_limo.launch">
             <arg name="robot_namespace" value="robot2"/>
             <arg name="x" value="0.5" />
             <arg name="y" value="14.5" />
@@ -26,7 +26,7 @@
 
     <!-- Robot 3 -->
     <group ns="robot3">
-        <include file="$(find limo_gazebo_sim)/launch/my_limo.launch">
+        <include file="$(find robotics_project_pkg)/launch/my_limo.launch">
             <arg name="robot_namespace" value="robot3"/>
             <arg name="x" value="14.5" />
             <arg name="y" value="14.5" />
