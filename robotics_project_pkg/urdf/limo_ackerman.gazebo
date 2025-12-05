@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot name="limo_ackerman" xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="limo_four_diff" xmlns:xacro="http://ros.org/wiki/xacro">
     <xacro:include filename="$(find limo_description)/urdf/limo_gazebo.gazebo" />
 
     <!-- Actuator configurations -->
@@ -52,3 +52,4 @@
         </plugin>
     </gazebo>
 </robot>
+

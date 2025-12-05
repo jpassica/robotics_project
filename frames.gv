@@ -1,0 +1,18 @@
+digraph G {
+"base_link" -> "front_left_wheel_link"[label=" Broadcaster: /robot3/robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 661.5\nOldest transform: 656.6\n"];
+"base_footprint" -> "base_link"[label=" Broadcaster: /robot3/robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "front_right_wheel_link"[label=" Broadcaster: /robot3/robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 661.5\nOldest transform: 656.6\n"];
+"base_link" -> "rear_left_wheel_link"[label=" Broadcaster: /robot3/robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 661.5\nOldest transform: 656.6\n"];
+"base_link" -> "rear_right_wheel_link"[label=" Broadcaster: /robot3/robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 661.5\nOldest transform: 656.6\n"];
+"odom" -> "base_footprint"[label=" Broadcaster: /gazebo\nAverage rate: 300.161\nBuffer length: 4.984\nMost recent transform: 661.588\nOldest transform: 656.604\n"];
+"map" -> "odom"[label=" Broadcaster: /slam_toolbox\nAverage rate: 20.202\nBuffer length: 4.95\nMost recent transform: 661.779\nOldest transform: 656.829\n"];
+"base_link" -> "depth_camera_link"[label=" Broadcaster: /robot3/robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"depth_camera_link" -> "depth_link"[label=" Broadcaster: /robot3/robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "imu_link"[label=" Broadcaster: /robot3/robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "inertial_link"[label=" Broadcaster: /robot3/robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "laser_link"[label=" Broadcaster: /robot3/robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 661.604"[ shape=plaintext ] ;
+}->"map";
+}

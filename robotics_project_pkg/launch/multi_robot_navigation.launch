@@ -1,0 +1,34 @@
+<launch>
+    <!-- Start Simulation -->
+    <include file="$(find robotics_project_pkg)/launch/multi_robot.launch"/>
+
+    <!-- Robot 1 -->
+    <group ns="robot1">
+        <include file="$(find robotics_project_pkg)/launch/gmapping.launch">
+            <arg name="robot_namespace" value="robot1"/>
+        </include>
+        <include file="$(find robotics_project_pkg)/launch/move_base.launch">
+            <arg name="robot_namespace" value="robot1"/>
+        </include>
+    </group>
+
+    <!-- Robot 2 -->
+    <group ns="robot2">
+        <include file="$(find robotics_project_pkg)/launch/gmapping.launch">
+            <arg name="robot_namespace" value="robot2"/>
+        </include>
+        <include file="$(find robotics_project_pkg)/launch/move_base.launch">
+            <arg name="robot_namespace" value="robot2"/>
+        </include>
+    </group>
+
+    <!-- Robot 3 -->
+    <group ns="robot3">
+        <include file="$(find robotics_project_pkg)/launch/gmapping.launch">
+            <arg name="robot_namespace" value="robot3"/>
+        </include>
+        <include file="$(find robotics_project_pkg)/launch/move_base.launch">
+            <arg name="robot_namespace" value="robot3"/>
+        </include>
+    </group>
+</launch>

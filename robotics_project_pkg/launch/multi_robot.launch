@@ -7,30 +7,81 @@
     </include>
 
     <!-- Robot 1 -->
+    <include file="$(find robotics_project_pkg)/launch/my_limo.launch">
+        <arg name="robot_namespace" value="robot1"/>
+        <arg name="x" value="0.5" />
+        <arg name="y" value="0.5" />
+    </include>
+    <include file="$(find robotics_project_pkg)/launch/move_base.launch">
+        <arg name="robot_namespace" value="robot1"/>
+    </include>
+    <!-- SLAM Toolbox for robot1 -->
     <group ns="robot1">
-        <include file="$(find robotics_project_pkg)/launch/my_limo.launch">
-            <arg name="robot_namespace" value="robot1"/>
-            <arg name="x" value="0.5" />
-            <arg name="y" value="0.5" />
-        </include>
+        <node pkg="slam_toolbox" type="sync_slam_toolbox_node" name="slam_toolbox" output="screen">
+            <param name="use_sim_time" value="true"/>
+            <param name="slam_mode" value="mapping"/>
+            <param name="map_frame_name" value="map"/>
+            <param name="odom_frame_name" value="odom"/>
+            <param name="base_frame_name" value="base_footprint"/>
+            <param name="scan_topic" value="scan"/>
+            <param name="map_update_interval" value="5.0"/>
+            <param name="resolution" value="0.05"/>
+            <!-- Explicitly remap to keep topics within namespace -->
+            <remap from="/map" to="map"/>
+            <remap from="/map_metadata" to="map_metadata"/>
+        </node>
     </group>
 
     <!-- Robot 2 -->
+    <include file="$(find robotics_project_pkg)/launch/my_limo.launch">
+        <arg name="robot_namespace" value="robot2"/>
+        <arg name="x" value="0.5" />
+        <arg name="y" value="14.5" />
+    </include>
+    <include file="$(find robotics_project_pkg)/launch/move_base.launch">
+        <arg name="robot_namespace" value="robot2"/>
+    </include>
+    <!-- SLAM Toolbox for robot2 -->
     <group ns="robot2">
-        <include file="$(find robotics_project_pkg)/launch/my_limo.launch">
-            <arg name="robot_namespace" value="robot2"/>
-            <arg name="x" value="0.5" />
-            <arg name="y" value="14.5" />
-        </include>
+        <node pkg="slam_toolbox" type="sync_slam_toolbox_node" name="slam_toolbox" output="screen">
+            <param name="use_sim_time" value="true"/>
+            <param name="slam_mode" value="mapping"/>
+            <param name="map_frame_name" value="map"/>
+            <param name="odom_frame_name" value="odom"/>
+            <param name="base_frame_name" value="base_footprint"/>
+            <param name="scan_topic" value="scan"/>
+            <param name="map_update_interval" value="5.0"/>
+            <param name="resolution" value="0.05"/>
+            <!-- Explicitly remap to keep topics within namespace -->
+            <remap from="/map" to="map"/>
+            <remap from="/map_metadata" to="map_metadata"/>
+        </node>
     </group>
 
     <!-- Robot 3 -->
+    <include file="$(find robotics_project_pkg)/launch/my_limo.launch">
+        <arg name="robot_namespace" value="robot3"/>
+        <arg name="x" value="14.5" />
+        <arg name="y" value="14.5" />
+    </include>
+    <include file="$(find robotics_project_pkg)/launch/move_base.launch">
+        <arg name="robot_namespace" value="robot3"/>
+    </include>
+    <!-- SLAM Toolbox for robot3 -->
     <group ns="robot3">
-        <include file="$(find robotics_project_pkg)/launch/my_limo.launch">
-            <arg name="robot_namespace" value="robot3"/>
-            <arg name="x" value="14.5" />
-            <arg name="y" value="14.5" />
-        </include>
+        <node pkg="slam_toolbox" type="sync_slam_toolbox_node" name="slam_toolbox" output="screen">
+            <param name="use_sim_time" value="true"/>
+            <param name="slam_mode" value="mapping"/>
+            <param name="map_frame_name" value="map"/>
+            <param name="odom_frame_name" value="odom"/>
+            <param name="base_frame_name" value="base_footprint"/>
+            <param name="scan_topic" value="scan"/>
+            <param name="map_update_interval" value="5.0"/>
+            <param name="resolution" value="0.05"/>
+            <!-- Explicitly remap to keep topics within namespace -->
+            <remap from="/map" to="map"/>
+            <remap from="/map_metadata" to="map_metadata"/>
+        </node>
     </group>
 
 </launch>

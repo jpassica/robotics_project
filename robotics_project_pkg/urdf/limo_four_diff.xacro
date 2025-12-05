@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 
-<robot name="limo_four_diff" xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="${robot_namespace}" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!-- Add robot namespace arg -->
+    <xacro:arg name="robot_namespace" default="limo"/>
 
     <xacro:include filename="$(find limo_description)/urdf/limo_xacro.xacro" />
     <xacro:include filename="$(find limo_description)/urdf/limo_four_diff.gazebo" />
@@ -20,13 +23,15 @@
 
     <xacro:property name="wheel_length" value="0.045" />
     <xacro:property name="wheel_radius" value="0.045" />
-  <link name="base_footprint"/>
 
-  <joint name="base_joint" type="fixed">
-    <parent link="base_footprint"/>
-    <child link="base_link"/>
-    <origin xyz="0.0 0.0 0.15" rpy="0 0 0"/>
-  </joint>
+    <link name="base_footprint"/>
+
+    <joint name="base_joint" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+        <origin xyz="0.0 0.0 0.15" rpy="0 0 0"/>
+    </joint>
+
     <!-- Base link -->
     <link name="base_link">
         <visual>
@@ -36,11 +41,10 @@
             </geometry>
         </visual>
         <collision>
-            <!--origin xyz="0 0 -0.15" rpy="0 0 1.57" /-->
             <origin xyz="0 0 0" rpy="0 0 0" />
-          <geometry>
-              <box size="${base_x_size} ${base_y_size} ${base_z_size}"/>
-          </geometry>
+            <geometry>
+                <box size="${base_x_size} ${base_y_size} ${base_z_size}"/>
+            </geometry>
         </collision>
     </link>
 
@@ -48,8 +52,8 @@
         <inertial>
             <origin xyz="0.0 0.0 0.0" />
             <mass value="${base_mass}" />
-            <inertia ixx="0.24" ixy="0" ixz="0" 
-                     iyy="0.96" iyz="0" 
+            <inertia ixx="0.24" ixy="0" ixz="0"
+                     iyy="0.96" iyz="0"
                      izz="0.96" />
         </inertial>
     </link>
@@ -87,4 +91,5 @@
     <xacro:limo_wheel parent_prefix="base_link" wheel_prefix="rear_right" reflect="-1">
         <origin xyz="${-wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="${M_PI} 0 0" />
     </xacro:limo_wheel>
+
 </robot>
